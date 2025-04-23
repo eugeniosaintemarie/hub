@@ -43,13 +43,13 @@ export function Menu() {
         <MenuItem icon="stopwatch" text="Pomodoro" href="https://pomodoro-esm.netlify.app/#/" />
         <MenuItem
           icon="message"
-          text="WhatsApp2chat"
+          text="Number2WhatsApp"
           href="https://eugeniosaintemarie.github.io/whatsapp-chat?ref=hub"
         />
 
         <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
 
-        <MenuItem icon="portfolio" text="Portfolio" href="https://eugeniosaintemarie.github.io/portfolio-v1?ref=hub" />
+        <MenuItem icon="portfolio" text="Portfolio" href="https://eugeniosaintemarie.github.io/portfolio?ref=hub" />
 
         <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
 
