@@ -9,7 +9,7 @@ export function Menu() {
           className="text-[#808080] font-bold text-base writing-mode-vertical transform rotate-180"
           style={{ writingMode: "vertical-rl" }}
         >
-          ∃ugenio Hub
+          ∃ugenio hub
         </span>
       </div>
 
