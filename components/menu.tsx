@@ -14,14 +14,10 @@ export function Menu() {
       </div>
 
       <div className="pl-10 py-2">
-        {/* Group 1: Coffee and Pomodoro */}
-        <MenuItem icon="coffee" text="Coffeedoro" href="https://coffee-doro.vercel.app/?ref=hub" />
-        <MenuItem icon="stopwatch" text="Pomodoro" href="https://pomodoro-esm.netlify.app/#/" />
 
-        <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
 
-        {/* Group 2: Games */}
-        <MenuItem
+
+      <MenuItem
           icon="skull"
           text="Amigos de mierda"
           href="https://eugeniosaintemarie.github.io/amigos-de-mierda?ref=hub"
@@ -31,7 +27,20 @@ export function Menu() {
 
         <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
 
-        {/* Group 3: WhatsApp */}
+        <MenuItem icon="notes" text="Notes" href="https://eugeniosaintemarie.github.io/notes?ref=hub" />
+        <MenuItem icon="book" text="Phrases" href="https://eugeniosaintemarie.github.io/phrases?ref=hub" />
+        <MenuItem icon="quote" text="Quotes" href="https://eugeniosaintemarie.github.io/quotes?ref=hub" />
+        <MenuItem icon="camera" text="Photos" href="https://eugeniosaintemarie.github.io/photos?ref=hub" />
+
+        <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
+
+        <MenuItem icon="pinterest" text="Pinterest" href="https://www.pinterest.es/eugeniosaintemarie" />
+        <MenuItem icon="music" text="Spotify" href="https://open.spotify.com/user/eugeniosaintemarie/playlists" />
+
+        <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
+
+        <MenuItem icon="coffee" text="Coffeedoro" href="https://coffee-doro.vercel.app/?ref=hub" />
+        <MenuItem icon="stopwatch" text="Pomodoro" href="https://pomodoro-esm.netlify.app/#/" />
         <MenuItem
           icon="message"
           text="WhatsApp2chat"
@@ -40,27 +49,14 @@ export function Menu() {
 
         <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
 
-        {/* Group 4: Content */}
-        <MenuItem icon="notes" text="Notes" href="https://eugeniosaintemarie.github.io/notes?ref=hub" />
-        <MenuItem icon="book" text="Phrases" href="https://eugeniosaintemarie.github.io/phrases?ref=hub" />
-        <MenuItem icon="quote" text="Quotes" href="https://eugeniosaintemarie.github.io/quotes?ref=hub" />
-        <MenuItem icon="camera" text="Photos" href="https://eugeniosaintemarie.github.io/photos?ref=hub" />
-        <MenuItem icon="pinterest" text="Pinterest" href="https://www.pinterest.es/eugeniosaintemarie" />
-
-        <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
-
-        {/* Group 5: Spotify */}
-        <MenuItem icon="music" text="Spotify" href="https://open.spotify.com/user/eugeniosaintemarie/playlists" />
-
-        <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
-
-        {/* Group 6: Portfolio */}
         <MenuItem icon="portfolio" text="Portfolio" href="https://eugeniosaintemarie.github.io/portfolio-v1?ref=hub" />
 
         <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
 
-        {/* Shut Down */}
         <MenuItem icon="shutdown" text="Shut Down" onClick={() => window.close()} />
+
+
+
       </div>
     </div>
   )
