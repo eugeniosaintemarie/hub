@@ -31,7 +31,9 @@ export function Menu() {
         <MenuItem icon="quote" text="Quotes" href="https://eugeniosaintemarie.github.io/quotes?ref=hub" />
         <MenuItem icon="camera" text="Photos" href="https://eugeniosaintemarie.github.io/photos?ref=hub" />
 
+        { /*
         <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
+        */ }
 
         <MenuItem icon="pinterest" text="Pinterest" href="https://www.pinterest.es/eugeniosaintemarie" />
         <MenuItem icon="music" text="Spotify" href="https://open.spotify.com/user/eugeniosaintemarie/playlists" />
