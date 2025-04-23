@@ -28,7 +28,6 @@ export function Menu() {
         <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
 
         <MenuItem icon="notes" text="Notes" href="https://eugeniosaintemarie.github.io/notes?ref=hub" />
-        <MenuItem icon="book" text="Phrases" href="https://eugeniosaintemarie.github.io/phrases?ref=hub" />
         <MenuItem icon="quote" text="Quotes" href="https://eugeniosaintemarie.github.io/quotes?ref=hub" />
         <MenuItem icon="camera" text="Photos" href="https://eugeniosaintemarie.github.io/photos?ref=hub" />
 
@@ -49,9 +48,11 @@ export function Menu() {
 
         <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
 
+        { /*
         <MenuItem icon="portfolio" text="Portfolio" href="https://eugeniosaintemarie.github.io/portfolio?ref=hub" />
 
         <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
+        */ }
 
         <MenuItem icon="shutdown" text="Shut Down" onClick={() => window.close()} />
 
