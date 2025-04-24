@@ -70,7 +70,7 @@ export function MenuItem({ icon, text, hasSubmenu = false, onClick, href }: Menu
 
   return (
     <div
-      className="flex items-center px-2 py-1 hover:bg-[#000080] hover:text-white cursor-pointer"
+      className="flex items-center px-2 py-1 hover:bg-[#000080] hover:text-white cursor-pointer pr-2"
       onClick={handleClick}
     >
       <div className="w-6 h-6 mr-2 flex items-center justify-center">{getIcon()}</div>
