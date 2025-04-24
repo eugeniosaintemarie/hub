@@ -1,5 +1,6 @@
 "use client"
 import { MenuItem } from "@/components/menu-item"
+import { MenuGroup } from "@/components/menu-group"
 
 export function Menu() {
   return (
@@ -27,13 +28,15 @@ export function Menu() {
 
         <div className="h-[1px] bg-[#c0c0c0] my-1 mx-2"></div>
 
-        <MenuItem
-            icon="skull"
-          text="Amigos de mierda"
-          href="https://eugeniosaintemarie.github.io/amigos-de-mierda?ref=hub"
-        />
-        <MenuItem icon="dice" text="Generala tracker" href="https://generala-tracker.vercel.app?ref=hub" />
-        <MenuItem icon="trophy" text="Baza tracker" href="https://baza-tracker.vercel.app?ref=hub" />
+        <MenuGroup title="Games">
+          <MenuItem
+              icon="skull"
+            text="Amigos de mierda"
+            href="https://eugeniosaintemarie.github.io/amigos-de-mierda?ref=hub"
+          />
+          <MenuItem icon="dice" text="Generala tracker" href="https://generala-tracker.vercel.app?ref=hub" />
+          <MenuItem icon="trophy" text="Baza tracker" href="https://baza-tracker.vercel.app?ref=hub" />
+        </MenuGroup>
 
         <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
 
