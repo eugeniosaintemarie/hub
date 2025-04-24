@@ -5,9 +5,9 @@ import { MenuGroup } from "@/components/menu-group"
 export function Menu() {
   return (
     <div className="bg-[#c0c0c0] border-2 border-[#ffffff] border-r-[#808080] border-b-[#808080] shadow-lg">
-      <div className="border-r-2 border-[#808080] w-8 h-full absolute left-0 top-0 bg-[#c0c0c0] flex flex-col items-center pt-2">
+      <div className="border-r-2 border-[#808080] w-8 h-full absolute left-0 top-0 bg-[#404040] flex flex-col items-center pt-2">
         <span
-          className="text-[#808080] font-bold text-base writing-mode-vertical transform rotate-180"
+          className="text-white font-bold text-lg writing-mode-vertical transform rotate-180"
           style={{ writingMode: "vertical-rl" }}
         >
           ∃ugenio hub
