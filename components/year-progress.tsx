@@ -4,13 +4,15 @@ import { useEffect, useState } from "react"
 export function YearProgress() {
   const [progress, setProgress] = useState(0)
   const [percentage, setPercentage] = useState("0%")
+  const [endOfYear, setEndOfYear] = useState<Date>(new Date(new Date().getFullYear() + 1, 0, 0));
   const [remainingDays, setRemainingDays] = useState(0);
 
   useEffect(() => {
     const calculateYearProgress = () => {
       const now = new Date()
       const startOfYear = new Date(now.getFullYear(), 0, 1)
-      const endOfYear = new Date(now.getFullYear() + 1, 0, 0)
+      const newEndOfYear = new Date(now.getFullYear() + 1, 0, 0);
+      setEndOfYear(newEndOfYear);
 
       const totalMilliseconds = endOfYear.getTime() - startOfYear.getTime()
       const elapsedMilliseconds = now.getTime() - startOfYear.getTime()
