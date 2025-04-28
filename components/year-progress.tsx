@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 export function YearProgress() {
   const [progress, setProgress] = useState(0)
   const [percentage, setPercentage] = useState("0%")
+  const [remainingDays, setRemainingDays] = useState(0);
 
   useEffect(() => {
     const calculateYearProgress = () => {
