@@ -44,7 +44,7 @@ export function Menu() {
           <MenuItem icon="notes" text="Notes" href="https://eugeniosaintemarie.github.io/notes?ref=hub" />
           <MenuItem icon="quote" text="Quotes" href="https://eugeniosaintemarie.github.io/quotes?ref=hub" />
           <MenuItem icon="camera" text="Photos" href="https://eugeniosaintemarie.github.io/photos?ref=hub" />
-          <MenuItem icon="pinterest" text="Pinterest" href="https://www.pinterest.es/eugeniosaintemarie" />
+          <MenuItem icon="pin" text="Pinterest" href="https://www.pinterest.es/eugeniosaintemarie" />
           <MenuItem icon="music" text="Spotify" href="https://open.spotify.com/user/eugeniosaintemarie/playlists" />
 
           <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
@@ -53,7 +53,7 @@ export function Menu() {
       <MenuItem icon="portfolio" text="Portfolio" href="https://eugeniosaintemarie.github.io/portfolio?ref=hub" />
       */ }
 
-          <MenuItem icon="shutdown" text="Shut Down" onClick={() => window.close()} />
+          <MenuItem icon="shutdown" text="Shut down" onClick={() => window.close()} />
 
 
 

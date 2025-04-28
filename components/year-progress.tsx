@@ -33,9 +33,10 @@ export function YearProgress() {
 
   return (
     <div className="bg-[#c0c0c0] border-2 border-[#ffffff] border-r-[#808080] border-b-[#808080] mb-2 w-64 mx-auto shadow-md relative">
-      <div className="bg-[#000080] text-white px-1 py-0.5 text-xs flex justify-between items-center mb-1">
-        <span>yearProgress.exe {percentage}</span>
-        <span className="text-xs cursor-pointer">✕</span>
+      <div className="bg-[#000080] text-white px-1 py-0.5 text-xs grid grid-cols-[auto_1fr_auto] items-center mb-1 w-full">
+        <span>yearProgress.exe</span>
+        <span className="text-center">{percentage}</span>
+        <span className="text-xs cursor-pointer justify-self-end">✕</span>
       </div>
       <div className="px-2 pb-2">
         <div className="text-center mb-1 text-black font-sans text-sm">{remainingDays} días restantes para el {endOfYear.toLocaleDateString()}</div>
