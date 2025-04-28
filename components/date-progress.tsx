@@ -1,10 +1,10 @@
 "use client"
 import { useEffect, useState } from "react"
 
-export function YearProgress() {
+export function DateProgress({ targetDate }: { targetDate: Date }) {
   const [progress, setProgress] = useState(0)
   const [percentage, setPercentage] = useState("0%")
-  const [endOfYear, setEndOfYear] = useState<Date>(new Date(new Date().getFullYear() + 1, 0, 0));
+  const [endOfYear, setEndOfYear] = useState<Date>(targetDate);
   const [remainingDays, setRemainingDays] = useState(0);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export function YearProgress() {
     const interval = setInterval(calculateYearProgress, 3600000)
 
     return () => clearInterval(interval)
-  }, [targetDate]);
+  }, [targetDate, endOfYear]);
 
   return (
     <div className="bg-[#c0c0c0] border-2 border-[#ffffff] border-r-[#808080] border-b-[#808080] mb-2 w-64 mx-auto shadow-md relative">

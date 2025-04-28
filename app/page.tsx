@@ -2,7 +2,8 @@
 
 import React, { useState } from "react"
 import { Menu } from "@/components/menu"
-import { DateProgress } from "@/components/date-progress"
+import dynamic from 'next/dynamic';
+const DateProgress = dynamic(() => import('@/components/date-progress').then(mod => mod.DateProgress), { ssr: false })
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(true)
