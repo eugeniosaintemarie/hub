@@ -10,10 +10,10 @@ export function YearProgress() {
       const now = new Date()
       const startOfYear = new Date(now.getFullYear(), 0, 1)
       const endOfYear = new Date(now.getFullYear() + 1, 0, 0)
-      
+
       const totalMilliseconds = endOfYear.getTime() - startOfYear.getTime()
       const elapsedMilliseconds = now.getTime() - startOfYear.getTime()
-      
+
       const calculatedProgress = Math.floor((elapsedMilliseconds / totalMilliseconds) * 100)
       setProgress(calculatedProgress)
       setPercentage(`${calculatedProgress}%`)
@@ -21,7 +21,7 @@ export function YearProgress() {
 
     calculateYearProgress()
     const interval = setInterval(calculateYearProgress, 3600000)
-    
+
     return () => clearInterval(interval)
   }, [])
 
@@ -36,9 +36,9 @@ export function YearProgress() {
         <div className="border border-[#808080] bg-white h-5 relative overflow-hidden">
           <div className="flex h-5 items-center pl-[2px]">
             {Array.from({ length: Math.ceil(progress / 5) }).map((_, index) => (
-              <div 
-                key={index} 
-                className="h-4 w-[10px] bg-[#0000ff] mr-[2px]" 
+              <div
+                key={index}
+                className="h-4 w-[10px] bg-[#0000ff] mr-[2px]"
               />
             ))}
           </div>
