@@ -17,15 +17,15 @@ export default function Home() {
     <>
       <div className="flex min-h-screen flex-col items-center justify-between bg-[#018281]">
         <div className="w-full min-h-screen flex flex-col justify-start">
-          <div className="flex-1 flex items-center justify-center">
-            <div className="grid gap-4">
+          <div className="flex-1 flex items-center justify-center pt-4 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center w-full">
             <YearProgress 
               title="yearProgress.exe"
-              targetDate={new Date(new Date().getFullYear() + 1, 0, 0)}
+              targetDate={new Date(2025, 11, 31)}
             />
             <DateProgress 
               title="Feos.exe"
-              targetDate={new Date(2025, 4, 2)}
+              targetDate={new Date(new Date().getTime() + 4 * 24 * 60 * 60 * 1000)}
             />
           </div>
           </div>
