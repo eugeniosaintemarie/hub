@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Menu } from "@/components/menu"
+import { YearProgress } from "@/components/year-progress"
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(true)
@@ -29,6 +30,10 @@ export default function Home() {
             </button>
             <div></div>
           </div>
+        </div>
+        <div className="flex flex-col items-center justify-center mt-8 mb-8 gap-6">
+          <YearProgress />
+          <YearProgress customTitle="Feos.exe" customStartDate={new Date(2024, 0, 1)} customEndDate={new Date(2025, 4, 2)} customLabel="2/5/2025" />
         </div>
       </div>
     </main>

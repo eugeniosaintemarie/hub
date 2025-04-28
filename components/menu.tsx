@@ -1,6 +1,7 @@
 "use client"
 import { MenuItem } from "@/components/menu-item"
 import { MenuGroup, MenuProvider } from "@/components/menu-group"
+import { YearProgress } from "@/components/year-progress"
 
 export function Menu() {
   return (
@@ -16,6 +17,7 @@ export function Menu() {
       </div>
 
       <div className="pl-10 py-2 whitespace-nowrap w-fit">
+        <YearProgress />
 
 
 
