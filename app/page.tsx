@@ -14,6 +14,10 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-[#018281]">
       <div className="w-full min-h-screen flex flex-col justify-end">
+      <div className="flex flex-col items-center justify-center mt-8 mb-8 gap-6">
+          <YearProgress />
+          <YearProgress customTitle="Feos.exe" customStartDate={new Date(2024, 0, 1)} customEndDate={new Date(2025, 4, 2)} customLabel="2/5/2025" />
+        </div>
         <div className="relative w-full">
           {isMenuOpen && (
             <div className="absolute bottom-full left-0 w-[75%] max-w-[320px]">
@@ -30,10 +34,6 @@ export default function Home() {
             </button>
             <div></div>
           </div>
-        </div>
-        <div className="flex flex-col items-center justify-center mt-8 mb-8 gap-6">
-          <YearProgress />
-          <YearProgress customTitle="Feos.exe" customStartDate={new Date(2024, 0, 1)} customEndDate={new Date(2025, 4, 2)} customLabel="2/5/2025" />
         </div>
       </div>
     </main>

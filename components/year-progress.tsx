@@ -20,7 +20,6 @@ export function YearProgress() {
     }
 
     calculateYearProgress()
-    // Actualizar cada hora
     const interval = setInterval(calculateYearProgress, 3600000)
     
     return () => clearInterval(interval)
@@ -29,11 +28,11 @@ export function YearProgress() {
   return (
     <div className="bg-[#c0c0c0] border-2 border-[#ffffff] border-r-[#808080] border-b-[#808080] mb-2 w-64 mx-auto shadow-md relative">
       <div className="bg-[#000080] text-white px-1 py-0.5 text-xs flex justify-between items-center mb-1">
-        <span>@JohnGeo886</span>
+        <span>yearProgress.exe</span>
         <span className="text-xs cursor-pointer">✕</span>
       </div>
       <div className="px-2 pb-2">
-        <div className="text-center mb-1 text-black font-sans text-sm">Año {new Date().getFullYear()}: {percentage}</div>
+        <div className="text-center mb-1 text-black font-sans text-sm">{new Date().getFullYear()}: {percentage}</div>
         <div className="border border-[#808080] bg-white h-5 relative overflow-hidden">
           <div className="flex h-5 items-center pl-[2px]">
             {Array.from({ length: Math.ceil(progress / 5) }).map((_, index) => (
@@ -43,11 +42,6 @@ export function YearProgress() {
               />
             ))}
           </div>
-        </div>
-        <div className="flex justify-center mt-2">
-          <button className="border border-[#ffffff] border-r-[#808080] border-b-[#808080] px-4 py-0.5 text-xs bg-[#c0c0c0] hover:active:border-[#808080] hover:active:border-r-[#ffffff] hover:active:border-b-[#ffffff] focus:outline-dotted focus:outline-1 focus:outline-black">
-            Always
-          </button>
         </div>
       </div>
     </div>
