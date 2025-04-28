@@ -3,6 +3,7 @@
 import React, { useState } from "react"
 import { Menu } from "@/components/menu"
 import dynamic from 'next/dynamic';
+import { YearProgress } from "@/components/year-progress";
 const DateProgress = dynamic(() => import('@/components/date-progress').then(mod => mod.DateProgress), { ssr: false })
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
         <div className="w-full min-h-screen flex flex-col justify-start">
           <div className="flex-1 flex items-center justify-center">
             <div className="grid gap-4">
-            <DateProgress 
+            <YearProgress 
               title="yearProgress.exe"
               targetDate={new Date(new Date().getFullYear() + 1, 0, 0)}
             />
