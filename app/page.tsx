@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import React, { useState } from "react"
 import { Menu } from "@/components/menu"
 import { YearProgress } from "@/components/year-progress"
 
@@ -12,7 +12,7 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-[#018281]">
+    <div className="flex min-h-screen flex-col items-center justify-between bg-[#018281]">
       <div className="w-full min-h-screen flex flex-col justify-start">
         <div className="flex-1 flex items-center justify-center">
           <YearProgress />
@@ -36,6 +36,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   )
 }
