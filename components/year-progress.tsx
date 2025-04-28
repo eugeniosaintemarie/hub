@@ -39,7 +39,7 @@ export function YearProgress() {
         <span className="text-xs cursor-pointer justify-self-end">✕</span>
       </div>
       <div className="px-2 pb-2">
-        <div className="text-center mb-1 text-black font-sans text-sm">{remainingDays} días restantes para el {endOfYear.toLocaleDateString()}</div>
+        <div className="text-center mb-1 text-black font-sans text-[0.8rem]">{remainingDays} días restantes para el {endOfYear.toLocaleDateString()}</div>
         <div className="border border-[#808080] bg-white h-5 relative overflow-hidden">
           <div className="flex h-5 items-center pl-[2px]">
             {Array.from({ length: Math.ceil(progress / 5) }).map((_, index) => (

@@ -10,7 +10,7 @@ import {
   FaBook,
   FaQuoteRight,
   FaCamera,
-  FaPinterest,
+  FaThumbtack,
   FaMusic,
   FaBriefcase,
   FaPowerOff,
@@ -56,7 +56,7 @@ export function MenuItem({ icon, text, hasSubmenu = false, onClick, href }: Menu
       case "camera":
         return <FaCamera className="text-black" />
       case "pinterest":
-        return <FaPinterest className="text-black" />
+        return <FaThumbtack className="text-black" />
       case "music":
         return <FaMusic className="text-black" />
       case "portfolio":
