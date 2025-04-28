@@ -2,7 +2,7 @@
 
 import React, { useState } from "react"
 import { Menu } from "@/components/menu"
-import { YearProgress } from "@/components/year-progress"
+import { DateProgress } from "@/components/date-progress"
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(true)
@@ -16,7 +16,16 @@ export default function Home() {
       <div className="flex min-h-screen flex-col items-center justify-between bg-[#018281]">
         <div className="w-full min-h-screen flex flex-col justify-start">
           <div className="flex-1 flex items-center justify-center">
-            <YearProgress />
+            <div className="grid gap-4">
+            <DateProgress 
+              title="yearProgress.exe"
+              targetDate={new Date(new Date().getFullYear() + 1, 0, 0)}
+            />
+            <DateProgress 
+              title="Feos.exe"
+              targetDate={new Date(2025, 4, 2)}
+            />
+          </div>
           </div>
           <div className="flex flex-col justify-end">
             <div className="relative w-full">

@@ -29,12 +29,12 @@ export function YearProgress() {
     const interval = setInterval(calculateYearProgress, 3600000)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [targetDate]);
 
   return (
     <div className="bg-[#c0c0c0] border-2 border-[#ffffff] border-r-[#808080] border-b-[#808080] mb-2 w-64 mx-auto shadow-md relative">
       <div className="bg-[#000080] text-white px-1 py-0.5 text-xs grid grid-cols-[auto_1fr_auto] items-center mb-1 w-full">
-        <span>yearProgress.exe</span>
+        <span>Feos.exe</span>
         <span className="text-center">{percentage}</span>
         <span className="text-xs cursor-pointer justify-self-end">✕</span>
       </div>
