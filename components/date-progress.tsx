@@ -14,16 +14,18 @@ export function DateProgress({ title, targetDate }: { title: string; targetDate:
       };
       
       const now = getArgentinaDate();
+      const startDate = new Date(2025, 4, 2);
       
       const remainingDays = Math.max(0, Math.ceil((targetDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)));
       setRemainingDays(remainingDays);
       
-      const totalDays = 90;
-      const daysLeft = Math.min(remainingDays, totalDays);
-      let calculatedProgress = Math.floor(((totalDays - daysLeft) / totalDays) * 100);
+      const totalDays = Math.ceil((targetDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+      const elapsedDays = Math.max(0, Math.ceil((now.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)));
+      let calculatedProgress = Math.floor((elapsedDays / totalDays) * 100);
       calculatedProgress = Math.max(0, Math.min(calculatedProgress, 100));
       setProgress(calculatedProgress);
       setPercentage(`${calculatedProgress}%`);
+    }
     }
 
     calculateDateProgress()
