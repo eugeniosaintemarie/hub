@@ -26,7 +26,6 @@ export function DateProgress({ title, targetDate }: { title: string; targetDate:
       setProgress(calculatedProgress);
       setPercentage(`${calculatedProgress}%`);
     }
-    }
 
     calculateDateProgress()
     
