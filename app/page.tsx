@@ -25,7 +25,7 @@ export default function Home() {
             />
             <DateProgress 
               title="Feos.exe"
-              targetDate={new Date(new Date().getTime() + 4 * 24 * 60 * 60 * 1000)}
+              targetDate={new Date(2025, 5, 7)}
             />
           </div>
           </div>
