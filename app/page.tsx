@@ -15,8 +15,10 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex min-h-screen flex-col items-center justify-between bg-[#018281]">
-        <div className="w-full min-h-screen flex flex-col justify-start">
+      <div className="flex min-h-screen flex-col items-center justify-between" style={{ backgroundImage: "url('/vintage-computer-bg.jpg')", backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
+        {/* Overlay semi-transparente para mejorar la visibilidad */}
+        <div className="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
+        <div className="w-full min-h-screen flex flex-col justify-start relative z-10">
           <div className="flex-1 flex items-center justify-center pt-4 w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center w-full">
             <YearProgress 
