@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Menu } from "@/components/menu"
 import dynamic from 'next/dynamic';
 import { YearProgress } from "@/components/year-progress";
@@ -8,6 +8,23 @@ const DateProgress = dynamic(() => import('@/components/date-progress').then(mod
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(true)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    // Función para verificar si es un dispositivo móvil
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    // Verificar al cargar
+    checkIfMobile()
+    
+    // Agregar listener para cambios de tamaño
+    window.addEventListener('resize', checkIfMobile)
+    
+    // Limpiar listener
+    return () => window.removeEventListener('resize', checkIfMobile)
+  }, [])
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -15,7 +32,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex min-h-screen flex-col items-center justify-between" style={{ backgroundImage: "url('/vintage-computer-bg.jpg')", backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
+      <div className="flex min-h-screen flex-col items-center justify-between" style={{ backgroundImage: "url('/vintage-computer-bg.jpg')", backgroundPosition: isMobile ? "left center" : "center", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
         {/* Overlay semi-transparente para mejorar la visibilidad */}
         <div className="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
         <div className="w-full min-h-screen flex flex-col justify-start relative z-10">
