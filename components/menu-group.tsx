@@ -47,7 +47,7 @@ export function MenuGroup({ title, children, id = title }: MenuGroupProps) {
           {isOpen ? <FaFolderOpen className="text-black" /> : <FaFolder className="text-black" />}
         </div>
         <span>{title}</span>
-        {!isOpen && <i className="fa-solid fa-xmark ml-auto"></i>}
+        {!isOpen && ">"}
       </div>
 
       {isOpen && (

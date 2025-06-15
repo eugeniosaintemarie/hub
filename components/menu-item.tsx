@@ -7,13 +7,12 @@ import {
   FaTrophy,
   FaCommentAlt,
   FaStickyNote,
-  FaBook,
   FaQuoteRight,
   FaCamera,
   FaThumbtack,
   FaMusic,
   FaBriefcase,
-  FaPowerOff,
+  FaCompactDisc,
 } from "react-icons/fa"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -59,9 +58,9 @@ export function MenuItem({ icon, text, hasSubmenu = false, onClick, href }: Menu
       case "spotify":
         return <FaMusic className="text-black" />
       case "set":
-        return <FontAwesomeIcon icon="fa-solid fa-compact-disc" className="text-black" />
+        return <FaCompactDisc className="text-black" />
       default:
-        return <FaCoffee className="text-black" />
+        return <FaBriefcase className="text-black" />
     }
   }
 
