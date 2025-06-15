@@ -15,6 +15,7 @@ import {
   FaBriefcase,
   FaPowerOff,
 } from "react-icons/fa"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 interface MenuItemProps {
   icon: string
