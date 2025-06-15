@@ -44,7 +44,7 @@ export function Menu() {
           <MenuItem icon="pinterest" text="Pinterest" href="https://www.pinterest.es/eugeniosaintemarie" />
           <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
           <MenuItem icon="spotify" text="Spotify" href="https://open.spotify.com/user/eugeniosaintemarie/playlists" />
-          <MenuItem icon="set" text="Set" href="https://eugenioset.vercep.app?ref=hub" />
+          <MenuItem icon="set" text="Set" href="https://eugenioset.vercel.app?ref=hub" />
         </div>
       </div>
     </MenuProvider>
