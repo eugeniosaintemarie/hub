@@ -12,14 +12,11 @@ export function Menu() {
             className="text-white font-bold text-lg writing-mode-vertical transform rotate-180"
             style={{ writingMode: "vertical-rl" }}
           >
-            ∃ugenio hub
+            {"</ >"}
           </span>
         </div>
 
         <div className="pl-10 py-2 whitespace-nowrap w-fit">
-
-
-
 
           <MenuGroup title="Tools">
             <MenuItem icon="coffee" text="Coffeedoro" href="https://coffee-doro.vercel.app/?ref=hub" />
@@ -30,7 +27,6 @@ export function Menu() {
               href="https://eugeniosaintemarie.github.io/whatsapp-chat?ref=hub"
             />
           </MenuGroup>
-
           <MenuGroup title="Games">
             <MenuItem
               icon="skull"
@@ -40,23 +36,15 @@ export function Menu() {
             <MenuItem icon="dice" text="Generala tracker" href="https://generala-tracker.vercel.app?ref=hub" />
             <MenuItem icon="trophy" text="Baza tracker" href="https://baza-tracker.vercel.app?ref=hub" />
           </MenuGroup>
-
+          <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
           <MenuItem icon="notes" text="Notes" href="https://eugeniosaintemarie.github.io/notes?ref=hub" />
-          <MenuItem icon="quote" text="Quotes" href="https://eugeniosaintemarie.github.io/quotes?ref=hub" />
+          <MenuItem icon="quotes" text="Quotes" href="https://eugeniosaintemarie.github.io/quotes?ref=hub" />
+          <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
           <MenuItem icon="camera" text="Photos" href="https://eugeniosaintemarie.github.io/photos?ref=hub" />
           <MenuItem icon="pinterest" text="Pinterest" href="https://www.pinterest.es/eugeniosaintemarie" />
-          <MenuItem icon="music" text="Spotify" href="https://open.spotify.com/user/eugeniosaintemarie/playlists" />
-
           <div className="h-[1px] bg-[#808080] my-1 mx-2"></div>
-
-          { /*
-      <MenuItem icon="portfolio" text="Portfolio" href="https://eugeniosaintemarie.github.io/portfolio?ref=hub" />
-      */ }
-
-          <MenuItem icon="shutdown" text="Shut down" onClick={() => window.close()} />
-
-
-
+          <MenuItem icon="spotify" text="Spotify" href="https://open.spotify.com/user/eugeniosaintemarie/playlists" />
+          <MenuItem icon="set" text="Set" href="https://eugenioset.vercep.app?ref=hub" />
         </div>
       </div>
     </MenuProvider>

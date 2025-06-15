@@ -49,20 +49,16 @@ export function MenuItem({ icon, text, hasSubmenu = false, onClick, href }: Menu
         return <FaCommentAlt className="text-black" />
       case "notes":
         return <FaStickyNote className="text-black" />
-      case "book":
-        return <FaBook className="text-black" />
-      case "quote":
+      case "quotes":
         return <FaQuoteRight className="text-black" />
       case "camera":
         return <FaCamera className="text-black" />
       case "pinterest":
         return <FaThumbtack className="text-black" />
-      case "music":
+      case "spotify":
         return <FaMusic className="text-black" />
-      case "portfolio":
-        return <FaBriefcase className="text-black" />
-      case "shutdown":
-        return <FaPowerOff className="text-black" />
+      case "set":
+        return <FontAwesomeIcon icon="fa-solid fa-compact-disc" className="text-black" />
       default:
         return <FaCoffee className="text-black" />
     }
@@ -75,7 +71,7 @@ export function MenuItem({ icon, text, hasSubmenu = false, onClick, href }: Menu
     >
       <div className="w-6 h-6 mr-2 flex items-center justify-center">{getIcon()}</div>
       <span>{text}</span>
-      {hasSubmenu && <span className="ml-auto">▶</span>}
+      {hasSubmenu && <span className="ml-auto">{">"}</span>}
     </div>
   )
 }
