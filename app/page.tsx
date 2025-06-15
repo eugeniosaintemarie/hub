@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react"
 import { Menu } from "@/components/menu"
 import dynamic from 'next/dynamic';
 import { YearProgress } from "@/components/year-progress";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBox } from "@fortawesome/free-solid-svg-icons";
 const DateProgress = dynamic(() => import('@/components/date-progress').then(mod => mod.DateProgress), { ssr: false })
 
 export default function Home() {
@@ -56,7 +58,7 @@ export default function Home() {
                   className="h-8 px-2 flex items-center bg-[#c0c0c0] border-[1px] border-[#ffffff] border-r-[#808080] border-b-[#808080] active:border-[#808080] active:border-r-[#ffffff] active:border-b-[#ffffff] focus:outline-none"
                 >
                   <span className="text-xl mr-1">   </span>
-                  <i className="fa-solid fa-box"></i>
+                  <FontAwesomeIcon icon={faBox} />
                   <span className="text-xl mr-1">   </span>
                 </button>
                 <div></div>
