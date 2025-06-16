@@ -5,6 +5,7 @@ export function YearProgress({ title, targetDate }: { title: string; targetDate:
   const [progress, setProgress] = useState(0)
   const [percentage, setPercentage] = useState("0%")
   const [remainingDays, setRemainingDays] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const calculateYearProgress = () => {
@@ -35,12 +36,14 @@ export function YearProgress({ title, targetDate }: { title: string; targetDate:
     return () => clearInterval(interval)
   }, [targetDate]);
 
+  if (!visible) return null;
+
   return (
     <div className="bg-[#c0c0c0] border-2 border-[#ffffff] border-r-[#808080] border-b-[#808080] mb-2 w-64 mx-auto shadow-md relative">
       <div className="bg-[#000080] text-white px-1 py-0.5 text-xs grid grid-cols-[auto_1fr_auto] items-center mb-1 w-full">
         <span>{title}</span>
         <span className="text-center">{percentage}</span>
-        {/*<span className="text-xs cursor-pointer justify-self-end">✕</span>*/}
+        <span className="text-xs cursor-pointer justify-self-end" onClick={() => setVisible(false)}>✕</span>
         </div>
       <div className="px-2 pb-2">
         <div className="text-center mb-1 text-black font-sans text-[0.8rem]">{remainingDays} remaining days for the {targetDate.toLocaleDateString('es-AR', { day: 'numeric', month: 'numeric', year: 'numeric' })}</div>
