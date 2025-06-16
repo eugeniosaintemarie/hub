@@ -39,7 +39,7 @@ export function DateProgress({ title, targetDate }: { title: string; targetDate:
       <div className="bg-[#000080] text-white px-1 py-0.5 text-xs grid grid-cols-[auto_1fr_auto] items-center mb-1 w-full">
         <span>{title}</span>
         <span className="text-center">{percentage}</span>
-        {/*<span className="text-xs cursor-pointer justify-self-end">✕</span>*/}
+        <span className="text-xs cursor-pointer justify-self-end">✕</span>
       </div>
       <div className="px-2 pb-2">
         <div className="text-center mb-1 text-black font-sans text-[0.8rem]">{remainingDays} remaining days for the {targetDate.toLocaleDateString('es-AR', { day: 'numeric', month: 'numeric', year: 'numeric' })}</div>
