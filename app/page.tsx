@@ -44,8 +44,8 @@ export default function Portfolio() {
       id: 4,
       title: "Amigos de mierda",
       category: "",
-      heightClass: "h-[13vh]",
-      colorClass: "bg-[#000000] hover:bg-[#25653b]",
+      heightClass: "h-[20vh]",
+      colorClass: "bg-[#795548] hover:bg-[#6D4C41]",
       link: "https://eugeniosaintemarie.github.io/amigos-de-mierda/?ref=hub",
     },
     {
@@ -68,16 +68,16 @@ export default function Portfolio() {
       id: 8,
       title: "Generala tracker",
       category: "",
-      heightClass: "h-[7vh]",
-      colorClass: "bg-[#000000] hover:bg-[#25653b]",
+      heightClass: "h-[10vh]",
+      colorClass: "bg-[#5D4037] hover:bg-[#4E342E]",
       link: "https://generala-tracker.vercel.app/?ref=hub",
     },
     {
       id: 9,
       title: "La Baza tracker",
       category: "",
-      heightClass: "h-[7vh]",
-      colorClass: "bg-[#000000] hover:bg-[#25653b]",
+      heightClass: "h-[10vh]",
+      colorClass: "bg-[#5D4037] hover:bg-[#4E342E]",
       link: "https://baza-tracker.vercel.app/?ref=hub",
     },
   ]
@@ -116,7 +116,6 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-[#0C0C0C]">
-      {/* Masonry Grid */}
       <main className="p-3">
         <div className="max-w-4xl mx-auto">
           <div className="columns-2 gap-3 space-y-3">
