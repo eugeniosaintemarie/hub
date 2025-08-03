@@ -44,7 +44,7 @@ export default function Portfolio() {
       id: 4,
       title: "Amigos de mierda",
       category: "",
-      heightClass: "h-[20vh]",
+      heightClass: "h-[19vh]",
       colorClass: "bg-[#795548] hover:bg-[#6D4C41]",
       link: "https://eugeniosaintemarie.github.io/amigos-de-mierda/?ref=hub",
     },
