@@ -1,7 +1,5 @@
 "use client"
 
-import { GlitchEffect, GlitchText } from '@/components/ui/glitch-effect'
-
 export default function Portfolio() {
   // const [isLoading, setIsLoading] = useState(true)
   // const [currentLine, setCurrentLine] = useState(0)
@@ -122,63 +120,25 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto">
           <div className="columns-2 gap-3 space-y-3">
             {portfolioItems.map((item, index) => (
-              // Aplicar efecto glitch completo a la tarjeta "Amigos de mierda"
-              item.id === 4 ? (
-                <GlitchEffect 
-                  key={item.id}
-                  trigger="hover"
-                  className="break-inside-avoid mb-3"
-                >
-                  <div
-                    className={`group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
-                    style={{
-                      animationDelay: `${index * 100}ms`,
-                      animation: "fadeInUp 0.6s ease-out forwards",
-                    }}
-                    onClick={() => {
-                      if (item.link) {
-                        window.open(item.link, "_blank")
-                      }
-                    }}
-                  >
-                    <div className="relative w-full flex items-center justify-center">
-                      <h2 className="text-white text-lg font-bold text-center leading-tight group-hover:scale-105 transition-transform duration-300">
-                        {item.title}
-                      </h2>
-                    </div>
-                  </div>
-                </GlitchEffect>
-              ) : (
-                <div
-                  key={item.id}
-                  className={`break-inside-avoid mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
-                  style={{
-                    animationDelay: `${index * 100}ms`,
-                    animation: "fadeInUp 0.6s ease-out forwards",
-                  }}
-                  onClick={() => {
-                    if (item.link) {
-                      window.open(item.link, "_blank")
-                    }
-                  }}
-                >
-                  <div className="relative w-full flex items-center justify-center">
-                    {/* Aplicar efecto glitch de texto a algunos elementos específicos */}
-                    {(item.id === 1 || item.id === 5) ? (
-                      <GlitchText 
-                        trigger="hover" 
-                        className="text-white text-lg font-bold text-center leading-tight group-hover:scale-105 transition-transform duration-300"
-                      >
-                        {item.title}
-                      </GlitchText>
-                    ) : (
-                      <h2 className="text-white text-lg font-bold text-center leading-tight group-hover:scale-105 transition-transform duration-300">
-                        {item.title}
-                      </h2>
-                    )}
-                  </div>
+              <div
+                key={item.id}
+                className={`break-inside-avoid mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
+                style={{
+                  animationDelay: `${index * 100}ms`,
+                  animation: "fadeInUp 0.6s ease-out forwards",
+                }}
+                onClick={() => {
+                  if (item.link) {
+                    window.open(item.link, "_blank")
+                  }
+                }}
+              >
+                <div className="relative w-full flex items-center justify-center">
+                  <h2 className="text-white text-lg font-bold text-center leading-tight group-hover:scale-105 transition-transform duration-300">
+                    {item.title}
+                  </h2>
                 </div>
-              )
+              </div>
             ))}
           </div>
         </div>

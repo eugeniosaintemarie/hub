@@ -70,22 +70,6 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --glitch-width: 100%;
-  --glitch-height: 100%;
-  --gap-horizontal: 10px;
-  --gap-vertical: 5px;
-  --time-anim: 1.5s;
-  --delay-anim: 0.25s;
-  --blend-mode-1: none;
-  --blend-mode-2: none;
-  --blend-mode-3: none;
-  --blend-mode-4: none;
-  --blend-mode-5: overlay;
-  --blend-color-1: transparent;
-  --blend-color-2: transparent;
-  --blend-color-3: transparent;
-  --blend-color-4: transparent;
-  --blend-color-5: #af4949;
 }
 
 /* Glitch styles */
