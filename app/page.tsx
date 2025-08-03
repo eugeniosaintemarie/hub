@@ -24,7 +24,7 @@ export default function Portfolio() {
       colorClass: "bg-[#ffc107] hover:bg-[#bd9315]",
       link: "https://eugeniosaintemarie.github.io/notes/?ref=hub",
     },
-      {
+    {
       id: 2,
       title: "Spotify",
       category: "",
@@ -42,6 +42,14 @@ export default function Portfolio() {
     },
     {
       id: 4,
+      title: "Amigos de mierda",
+      category: "",
+      heightClass: "h-[13vh]",
+      colorClass: "bg-[#000000] hover:bg-[#25653b]",
+      link: "https://eugeniosaintemarie.github.io/amigos-de-mierda/?ref=hub",
+    },
+    {
+      id: 5,
       title: "Photos",
       category: "",
       heightClass: "h-[25.5vh]",
@@ -49,14 +57,29 @@ export default function Portfolio() {
       link: "https://eugeniosaintemarie.github.io/photos/?ref=hub",
     },
     {
-      id: 5,
+      id: 7,
       title: "Pins",
       category: "",
       heightClass: "h-[25.5vh]",
       colorClass: "bg-[#E60023] hover:bg-[#a61229]",
       link: "https://es.pinterest.com/eugeniosaintemarie/",
     },
-
+    {
+      id: 8,
+      title: "Generala tracker",
+      category: "",
+      heightClass: "h-[7vh]",
+      colorClass: "bg-[#000000] hover:bg-[#25653b]",
+      link: "https://generala-tracker.vercel.app/?ref=hub",
+    },
+    {
+      id: 9,
+      title: "La Baza tracker",
+      category: "",
+      heightClass: "h-[7vh]",
+      colorClass: "bg-[#000000] hover:bg-[#25653b]",
+      link: "https://baza-tracker.vercel.app/?ref=hub",
+    },
   ]
 
   // useEffect(() => {
@@ -121,20 +144,6 @@ export default function Portfolio() {
           </div>
         </div>
       </main>
-
-      {/* Floating contact button */}
-      <div className="fixed bottom-6 right-6">
-        <button className="bg-white text-gray-900 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-            />
-          </svg>
-        </button>
-      </div>
     </div>
   )
 }
