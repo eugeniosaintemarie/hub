@@ -149,8 +149,18 @@ export default function Portfolio() {
         </div>
       </main>
       
+      {/* Eye icon to toggle buttons visibility */}
+      <div className="w-full flex justify-center my-8 z-20">
+        <button
+          onClick={() => setShowButtons(!showButtons)}
+          className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 border border-white/20"
+        >
+          <i className={`fas ${showButtons ? 'fa-eye' : 'fa-eye-slash'} text-white text-xl`}></i>
+        </button>
+      </div>
+      
       {/* Footer */}
-      <footer className="w-full flex justify-center pb-20 z-10">
+      <footer className="w-full flex justify-center pb-8 z-10">
         <a
           href="https://eugeniosaintemarie.github.io"
           target="_blank"
@@ -160,16 +170,6 @@ export default function Portfolio() {
           ∃ugenio © {new Date().getFullYear()}
         </a>
       </footer>
-      
-      {/* Eye icon to toggle buttons visibility */}
-      <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-20">
-        <button
-          onClick={() => setShowButtons(!showButtons)}
-          className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 border border-white/20"
-        >
-          <i className={`fas ${showButtons ? 'fa-eye' : 'fa-eye-slash'} text-white text-xl`}></i>
-        </button>
-      </div>
     </div>
   )
 }
