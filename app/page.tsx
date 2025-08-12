@@ -118,8 +118,8 @@ export default function Portfolio() {
   // }
 
   return (
-    <div className="min-h-screen relative flex items-center justify-center">
-      <main className="p-3 relative z-10 w-full">
+    <div className="min-h-screen relative flex flex-col">
+      <main className="p-3 relative z-10 w-full flex-1 flex items-center justify-center">
         <div className="max-w-4xl mx-auto">
           {showButtons && (
             <div className="columns-2 gap-3 space-y-3">
@@ -150,7 +150,7 @@ export default function Portfolio() {
       </main>
       
       {/* Footer */}
-      <footer className="w-full flex justify-center mt-8 mb-20 z-10">
+      <footer className="w-full flex justify-center pb-20 z-10">
         <a
           href="https://eugeniosaintemarie.github.io"
           target="_blank"
