@@ -1,6 +1,9 @@
 "use client"
 
+import { useState } from "react"
+
 export default function Portfolio() {
+  const [showButtons, setShowButtons] = useState(true)
   // const [isLoading, setIsLoading] = useState(true)
   // const [currentLine, setCurrentLine] = useState(0)
 
@@ -118,31 +121,43 @@ export default function Portfolio() {
     <div className="min-h-screen relative flex items-center justify-center">
       <main className="p-3 relative z-10 w-full">
         <div className="max-w-4xl mx-auto">
-          <div className="columns-2 gap-3 space-y-3">
-            {portfolioItems.map((item, index) => (
-              <div
-                key={item.id}
-                className={`break-inside-avoid mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
-                style={{
-                  animationDelay: `${index * 100}ms`,
-                  animation: "fadeInUp 0.6s ease-out forwards",
-                }}
-                onClick={() => {
-                  if (item.link) {
-                    window.open(item.link, "_blank")
-                  }
-                }}
-              >
-                <div className="relative w-full flex items-center justify-center">
-                  <h2 className="text-white text-lg font-bold text-center leading-tight group-hover:scale-105 transition-transform duration-300">
-                    {item.title}
-                  </h2>
+          {showButtons && (
+            <div className="columns-2 gap-3 space-y-3">
+              {portfolioItems.map((item, index) => (
+                <div
+                  key={item.id}
+                  className={`break-inside-avoid mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                    animation: "fadeInUp 0.6s ease-out forwards",
+                  }}
+                  onClick={() => {
+                    if (item.link) {
+                      window.open(item.link, "_blank")
+                    }
+                  }}
+                >
+                  <div className="relative w-full flex items-center justify-center">
+                    <h2 className="text-white text-lg font-bold text-center leading-tight group-hover:scale-105 transition-transform duration-300">
+                      {item.title}
+                    </h2>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </main>
+      
+      {/* Eye icon to toggle buttons visibility */}
+      <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-20">
+        <button
+          onClick={() => setShowButtons(!showButtons)}
+          className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 border border-white/20"
+        >
+          <i className={`fas ${showButtons ? 'fa-eye-slash' : 'fa-eye'} text-white text-xl`}></i>
+        </button>
+      </div>
     </div>
   )
 }
