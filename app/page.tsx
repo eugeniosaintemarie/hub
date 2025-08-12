@@ -149,6 +149,18 @@ export default function Portfolio() {
         </div>
       </main>
       
+      {/* Footer */}
+      <footer className="w-full flex justify-center mt-8 mb-20 z-10">
+        <a
+          href="https://eugeniosaintemarie.github.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white/70 hover:text-white transition-colors duration-300 text-sm font-medium"
+        >
+          ∃ugenio © {new Date().getFullYear()}
+        </a>
+      </footer>
+      
       {/* Eye icon to toggle buttons visibility */}
       <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-20">
         <button
