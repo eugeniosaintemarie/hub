@@ -21,7 +21,7 @@ export default function Portfolio() {
       title: "Notes",
       category: "",
       heightClass: "h-[30vh]",
-      colorClass: "bg-[#ffc107] hover:bg-[#bd9315]",
+      colorClass: "bg-[#ffc107]/75 hover:bg-[#bd9315]/75",
       link: "https://eugeniosaintemarie.github.io/notes/?ref=hub",
     },
     {
@@ -29,7 +29,7 @@ export default function Portfolio() {
       title: "Spotify",
       category: "",
       heightClass: "h-[10vh]",
-      colorClass: "bg-[#1DB954] hover:bg-[#248847]",
+      colorClass: "bg-[#1DB954]/75 hover:bg-[#248847]/75",
       link: "https://open.spotify.com/user/eugeniosaintemarie/playlists",
     },
     {
@@ -37,7 +37,7 @@ export default function Portfolio() {
       title: "Set",
       category: "",
       heightClass: "h-[10vh]",
-      colorClass: "bg-[#248847] hover:bg-[#25653b]",
+      colorClass: "bg-[#248847]/75 hover:bg-[#25653b]/75",
       link: "https://eugenioset.vercel.app/?ref=hub",
     },
     {
@@ -45,7 +45,7 @@ export default function Portfolio() {
       title: "Amigos de mierda",
       category: "",
       heightClass: "h-[19vh]",
-      colorClass: "bg-[#795548] hover:bg-[#6D4C41]",
+      colorClass: "bg-[#795548]/75 hover:bg-[#6D4C41]/75",
       link: "https://eugeniosaintemarie.github.io/amigos-de-mierda/?ref=hub",
     },
     {
@@ -53,7 +53,7 @@ export default function Portfolio() {
       title: "Photos",
       category: "",
       heightClass: "h-[25.5vh]",
-      colorClass: "bg-[#833AB4] hover:bg-[#673886]",
+      colorClass: "bg-[#833AB4]/75 hover:bg-[#673886]/75",
       link: "https://eugeniosaintemarie.github.io/photos/?ref=hub",
     },
     {
@@ -61,7 +61,7 @@ export default function Portfolio() {
       title: "Pins",
       category: "",
       heightClass: "h-[25.5vh]",
-      colorClass: "bg-[#E60023] hover:bg-[#a61229]",
+      colorClass: "bg-[#E60023]/75 hover:bg-[#a61229]/75",
       link: "https://es.pinterest.com/eugeniosaintemarie/",
     },
     {
@@ -69,7 +69,7 @@ export default function Portfolio() {
       title: "Generala tracker",
       category: "",
       heightClass: "h-[9vh]",
-      colorClass: "bg-[#5D4037] hover:bg-[#4E342E]",
+      colorClass: "bg-[#5D4037]/75 hover:bg-[#4E342E]/75",
       link: "https://generala-tracker.vercel.app/?ref=hub",
     },
     {
@@ -77,7 +77,7 @@ export default function Portfolio() {
       title: "La Baza tracker",
       category: "",
       heightClass: "h-[9vh]",
-      colorClass: "bg-[#5D4037] hover:bg-[#4E342E]",
+      colorClass: "bg-[#5D4037]/75 hover:bg-[#4E342E]/75",
       link: "https://baza-tracker.vercel.app/?ref=hub",
     },
   ]
@@ -115,8 +115,8 @@ export default function Portfolio() {
   // }
 
   return (
-    <div className="min-h-screen bg-[#0C0C0C]">
-      <main className="p-3">
+    <div className="min-h-screen relative flex items-center justify-center">
+      <main className="p-3 relative z-10 w-full">
         <div className="max-w-4xl mx-auto">
           <div className="columns-2 gap-3 space-y-3">
             {portfolioItems.map((item, index) => (
