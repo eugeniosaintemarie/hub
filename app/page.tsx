@@ -155,7 +155,7 @@ export default function Portfolio() {
           onClick={() => setShowButtons(!showButtons)}
           className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 border border-white/20"
         >
-          <i className={`fas ${showButtons ? 'fa-eye-slash' : 'fa-eye'} text-white text-xl`}></i>
+          <i className={`fas ${showButtons ? 'fa-eye' : 'fa-eye-slash'} text-white text-xl`}></i>
         </button>
       </div>
     </div>
