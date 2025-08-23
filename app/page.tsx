@@ -48,7 +48,7 @@ export default function Portfolio() {
       id: 4,
       title: "Amigos de mierda",
       category: "",
-      heightClass: "h-[ 36vh]",
+      heightClass: "h-[14vh]",
       colorClass: "bg-[#795548]/75 hover:bg-[#6D4C41]/75",
       link: "https://eugeniosaintemarie.github.io/amigos-de-mierda/?ref=hub",
     },
@@ -56,7 +56,7 @@ export default function Portfolio() {
       id: 5,
       title: "Photos",
       category: "",
-      heightClass: "h-[30vh]",
+      heightClass: "h-[35vh]",
       colorClass: "bg-[#833AB4]/75 hover:bg-[#673886]/75",
       link: "https://eugeniosaintemarie.github.io/photos/?ref=hub",
     },
@@ -64,7 +64,7 @@ export default function Portfolio() {
       id: 7,
       title: "Pins",
       category: "",
-      heightClass: "h-[20vh]",
+      heightClass: "h-[30vh]",
       colorClass: "bg-[#E60023]/75 hover:bg-[#a61229]/75",
       link: "https://es.pinterest.com/eugeniosaintemarie/",
     },
@@ -72,7 +72,7 @@ export default function Portfolio() {
       id: 8,
       title: "Generala tracker",
       category: "",
-      heightClass: "h-[23vh]",
+      heightClass: "h-[6.5vh]",
       colorClass: "bg-[#5D4037]/75 hover:bg-[#4E342E]/75",
       link: "https://generala-tracker.vercel.app/?ref=hub",
     },
@@ -80,7 +80,7 @@ export default function Portfolio() {
       id: 9,
       title: "La Baza tracker",
       category: "",
-      heightClass: "h-[23vh]",
+      heightClass: "h-[6.5vh]",
       colorClass: "bg-[#5D4037]/75 hover:bg-[#4E342E]/75",
       link: "https://baza-tracker.vercel.app/?ref=hub",
     },
@@ -151,7 +151,7 @@ export default function Portfolio() {
         </div>
       </main>
 
-      <div className="w-full flex justify-center my-8 z-20">
+      <div className="w-full flex justify-center my-2.5 z-20">
         <button
           onClick={() => setShowButtons(!showButtons)}
           className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 border border-white/20"
