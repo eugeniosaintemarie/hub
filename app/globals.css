@@ -12,13 +12,11 @@
   }
 }
 
-/* Masonry layout fallback */
 .masonry-item {
   break-inside: avoid;
   page-break-inside: avoid;
 }
 
-/* Custom scrollbar for dark theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -118,7 +116,7 @@
   body {
     @apply bg-background text-foreground;
     background-color: #0c0c0c;
-    background-image: url('/background-vintage-computer.jpg');
+    background-image: url("/background-vintage-computer.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -126,10 +124,11 @@
     min-height: 100vh;
     position: relative;
   }
-  
-  /* Overlay for better content readability */
+  body.imgloaded {
+  }
+
   body::before {
-    content: '';
+    content: "";
     position: fixed;
     top: 0;
     left: 0;
@@ -139,21 +138,18 @@
     z-index: -1;
     pointer-events: none;
   }
-  
-  /* Mobile optimization - align to left to prioritize the child/left side */
+
   @media (max-width: 768px) {
     body {
       background-position: left center;
       background-size: cover;
     }
-    
-    /* Stronger overlay on mobile for better readability */
+
     body::before {
       background: rgba(12, 12, 12, 0.5);
     }
   }
-  
-  /* Tablet optimization */
+
   @media (min-width: 769px) and (max-width: 1024px) {
     body {
       background-position: left center;

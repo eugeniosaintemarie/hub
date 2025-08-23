@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import GlitchBackground from "@/components/GlitchBackground"
 
 export default function Portfolio() {
   const [showButtons, setShowButtons] = useState(true)
@@ -13,9 +14,9 @@ export default function Portfolio() {
   //   "[ OK ] Initializing design modules...",
   //   "[ OK ] Mounting project gallery...",
   //   "[ OK ] Starting web services...",
-  //   "[ OK ] Portfolio system ready.",
+  //   "[ OK ] Portfolio system ready",
   //   "",
-  //   "Welcome to the creative space.",
+  //   "Welcome to the creative space",
   // ]
 
   const portfolioItems = [
@@ -23,7 +24,7 @@ export default function Portfolio() {
       id: 1,
       title: "Notes",
       category: "",
-      heightClass: "h-[30vh]",
+      heightClass: "h-[50vh]",
       colorClass: "bg-[#ffc107]/75 hover:bg-[#bd9315]/75",
       link: "https://eugeniosaintemarie.github.io/notes/?ref=hub",
     },
@@ -31,7 +32,7 @@ export default function Portfolio() {
       id: 2,
       title: "Spotify",
       category: "",
-      heightClass: "h-[10vh]",
+      heightClass: "h-[7vh]",
       colorClass: "bg-[#1DB954]/75 hover:bg-[#248847]/75",
       link: "https://open.spotify.com/user/eugeniosaintemarie/playlists",
     },
@@ -39,7 +40,7 @@ export default function Portfolio() {
       id: 3,
       title: "Set",
       category: "",
-      heightClass: "h-[10vh]",
+      heightClass: "h-[7vh]",
       colorClass: "bg-[#248847]/75 hover:bg-[#25653b]/75",
       link: "https://eugenioset.vercel.app/?ref=hub",
     },
@@ -47,7 +48,7 @@ export default function Portfolio() {
       id: 4,
       title: "Amigos de mierda",
       category: "",
-      heightClass: "h-[19vh]",
+      heightClass: "h-[ 26vh]",
       colorClass: "bg-[#795548]/75 hover:bg-[#6D4C41]/75",
       link: "https://eugeniosaintemarie.github.io/amigos-de-mierda/?ref=hub",
     },
@@ -55,7 +56,7 @@ export default function Portfolio() {
       id: 5,
       title: "Photos",
       category: "",
-      heightClass: "h-[25.5vh]",
+      heightClass: "h-[30vh]",
       colorClass: "bg-[#833AB4]/75 hover:bg-[#673886]/75",
       link: "https://eugeniosaintemarie.github.io/photos/?ref=hub",
     },
@@ -63,7 +64,7 @@ export default function Portfolio() {
       id: 7,
       title: "Pins",
       category: "",
-      heightClass: "h-[25.5vh]",
+      heightClass: "h-[20vh]",
       colorClass: "bg-[#E60023]/75 hover:bg-[#a61229]/75",
       link: "https://es.pinterest.com/eugeniosaintemarie/",
     },
@@ -71,7 +72,7 @@ export default function Portfolio() {
       id: 8,
       title: "Generala tracker",
       category: "",
-      heightClass: "h-[9vh]",
+      heightClass: "h-[13vh]",
       colorClass: "bg-[#5D4037]/75 hover:bg-[#4E342E]/75",
       link: "https://generala-tracker.vercel.app/?ref=hub",
     },
@@ -79,7 +80,7 @@ export default function Portfolio() {
       id: 9,
       title: "La Baza tracker",
       category: "",
-      heightClass: "h-[9vh]",
+      heightClass: "h-[13vh]",
       colorClass: "bg-[#5D4037]/75 hover:bg-[#4E342E]/75",
       link: "https://baza-tracker.vercel.app/?ref=hub",
     },
@@ -119,6 +120,7 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen relative flex flex-col">
+      <GlitchBackground />
       <main className="p-3 relative z-10 w-full flex-1 flex items-center justify-center">
         <div className="max-w-4xl mx-auto">
           {showButtons && (
@@ -148,8 +150,7 @@ export default function Portfolio() {
           )}
         </div>
       </main>
-      
-      {/* Eye icon to toggle buttons visibility */}
+
       <div className="w-full flex justify-center my-8 z-20">
         <button
           onClick={() => setShowButtons(!showButtons)}
@@ -158,8 +159,7 @@ export default function Portfolio() {
           <i className={`fas ${showButtons ? 'fa-eye' : 'fa-eye-slash'} text-white text-xl`}></i>
         </button>
       </div>
-      
-      {/* Footer */}
+
       <footer className="w-full flex justify-center pb-8 z-10">
         <a
           href="https://eugeniosaintemarie.github.io"
