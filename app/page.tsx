@@ -160,7 +160,7 @@ export default function Portfolio() {
         </button>
       </div>
 
-      <footer className="w-full flex justify-center pb-8 z-10">
+      <footer className="w-full flex justify-center pb-2.5 z-10">
         <a
           href="https://eugeniosaintemarie.github.io"
           target="_blank"
