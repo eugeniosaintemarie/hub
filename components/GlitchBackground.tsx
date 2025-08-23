@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from 'react';
-import styles from './glitch-background.module.css';
 
 export function GlitchBackground() {
     useEffect(() => {
@@ -12,13 +11,13 @@ export function GlitchBackground() {
         };
     }, []);
     return (
-        <div className={styles.wrapper} aria-hidden>
-            <div className={styles.glitch}>
-                <div className={styles.img} />
-                <div className={styles.img} />
-                <div className={styles.img} />
-                <div className={styles.img} />
-                <div className={styles.img} />
+        <div className="glitch-wrapper" aria-hidden>
+                <div className="glitch">
+                    <div className="glitch__img" />
+                    <div className="glitch__img" />
+                    <div className="glitch__img" />
+                    <div className="glitch__img" />
+                    <div className="glitch__img" />
             </div>
         </div>
     );
