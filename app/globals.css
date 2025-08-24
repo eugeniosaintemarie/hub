@@ -340,7 +340,7 @@ body.imgloaded .glitch__img:nth-child(5) {
     background-color: #0c0c0c;
     background-image: url("/background-vintage-computer.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: 20% center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
@@ -363,19 +363,19 @@ body.imgloaded .glitch__img:nth-child(5) {
 
   @media (max-width: 1200px) {
     body {
-      background-position: 25% center;
+      background-position: 10% center !important;
     }
   }
 
   @media (max-width: 1024px) {
     body {
-      background-position: 15% center;
+      background-position: 5% center !important;
     }
   }
 
   @media (max-width: 768px) {
     body {
-      background-position: 5% center;
+      background-position: 0% center !important;
       background-size: cover;
     }
 
@@ -386,7 +386,7 @@ body.imgloaded .glitch__img:nth-child(5) {
 
   @media (max-width: 480px) {
     body {
-      background-position: 0% center;
+      background-position: -10% center !important;
     }
   }
 }
