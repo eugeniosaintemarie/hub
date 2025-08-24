@@ -17,11 +17,28 @@
   page-break-inside: avoid;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
+::-webkit-scrollbar {.glitch__img {
+    position: absolute;
+    top: calc(-1 * var(--gap-vertical));
+    left: calc(-1 * var(--gap-horizontal));
+    width: calc(100% + var(--gap-horizontal) * 2);
+    height: calc(100% + var(--gap-vertical) * 2);
+    background: url("/background-vintage-computer.jpg") no-repeat left center / cover;
+    transform: translate3d(0, 0, 0);
+}: 8px;
 }
 
-::-webkit-scrollbar-track {
+::-webkit-s  body {
+    @apply bg-background text-foreground;
+    background-color: #0c0c0c;
+    background-image: url("/background-vintage-computer.jpg");
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 100vh;
+    position: relative;
+  }ack {
   background: #0c0c0c;
 }
 
@@ -361,22 +378,14 @@ body.imgloaded .glitch__img:nth-child(5) {
     pointer-events: none;
   }
 
-  @media (max-width: 1200px) {
-    body {
-      background-position: 10% center !important;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    body {
-      background-position: 5% center !important;
-    }
-  }
-
   @media (max-width: 768px) {
     body {
       background-position: 0% center !important;
       background-size: cover;
+    }
+    
+    .glitch__img {
+      background-position: 0% center !important;
     }
 
     body::before {
@@ -386,7 +395,11 @@ body.imgloaded .glitch__img:nth-child(5) {
 
   @media (max-width: 480px) {
     body {
-      background-position: -10% center !important;
+      background-position: -5% center !important;
+    }
+    
+    .glitch__img {
+      background-position: -5% center !important;
     }
   }
 }
