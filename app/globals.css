@@ -17,28 +17,11 @@
   page-break-inside: avoid;
 }
 
-::-webkit-scrollbar {.glitch__img {
-    position: absolute;
-    top: calc(-1 * var(--gap-vertical));
-    left: calc(-1 * var(--gap-horizontal));
-    width: calc(100% + var(--gap-horizontal) * 2);
-    height: calc(100% + var(--gap-vertical) * 2);
-    background: url("/background-vintage-computer.jpg") no-repeat left center / cover;
-    transform: translate3d(0, 0, 0);
-}: 8px;
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-::-webkit-s  body {
-    @apply bg-background text-foreground;
-    background-color: #0c0c0c;
-    background-image: url("/background-vintage-computer.jpg");
-    background-size: cover;
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    min-height: 100vh;
-    position: relative;
-  }ack {
+::-webkit-scrollbar-track {
   background: #0c0c0c;
 }
 
@@ -315,7 +298,7 @@
   left: calc(-1 * var(--gap-horizontal));
   width: calc(100% + var(--gap-horizontal) * 2);
   height: calc(100% + var(--gap-vertical) * 2);
-  background: url("/background-vintage-computer.jpg") no-repeat center / cover;
+  background: url("/background-vintage-computer.jpg") no-repeat left center / cover;
   transform: translate3d(0, 0, 0);
 }
 .glitch__img:nth-child(n + 2) {
@@ -357,15 +340,12 @@ body.imgloaded .glitch__img:nth-child(5) {
     background-color: #0c0c0c;
     background-image: url("/background-vintage-computer.jpg");
     background-size: cover;
-    background-position: 20% center;
+    background-position: left center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
     position: relative;
   }
-  body.imgloaded {
-  }
-
   body::before {
     content: "";
     position: fixed;
@@ -380,12 +360,12 @@ body.imgloaded .glitch__img:nth-child(5) {
 
   @media (max-width: 768px) {
     body {
-      background-position: 0% center !important;
+      background-position: left center !important;
       background-size: cover;
     }
     
     .glitch__img {
-      background-position: 0% center !important;
+      background-position: left center !important;
     }
 
     body::before {
@@ -395,11 +375,13 @@ body.imgloaded .glitch__img:nth-child(5) {
 
   @media (max-width: 480px) {
     body {
-      background-position: -5% center !important;
+      background-position: left center !important;
+      background-size: cover;
     }
     
     .glitch__img {
-      background-position: -5% center !important;
+      background-position: left center !important;
+      background-size: cover;
     }
   }
 }
