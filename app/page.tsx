@@ -154,7 +154,7 @@ export default function Portfolio() {
                   </div>
                 </div>
               )}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 space-y-3">
+              <div className="grid grid-cols-2 gap-3 space-y-3">
                 {portfolioItems.slice(1).map((item, index) => (
                   <div
                     key={item.id}
