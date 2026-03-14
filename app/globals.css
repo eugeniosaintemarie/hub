@@ -17,6 +17,19 @@
   page-break-inside: avoid;
 }
 
+.columns-2 {
+  column-width: auto;
+  columns: 2;
+  column-gap: 0.75rem;
+  column-fill: balance;
+}
+
+@media (max-width: 768px) {
+  .columns-2 {
+    columns: 2;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
