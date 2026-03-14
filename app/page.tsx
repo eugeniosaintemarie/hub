@@ -154,11 +154,11 @@ export default function Portfolio() {
                   </div>
                 </div>
               )}
-              <div className="grid grid-cols-2 gap-3 space-y-3">
+              <div className="columns-2 gap-3 space-y-3">
                 {portfolioItems.slice(1).map((item, index) => (
                   <div
                     key={item.id}
-                    className={`mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
+                    className={`break-inside-avoid mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
                     style={{
                       animationDelay: `${(index + 1) * 100}ms`,
                       animation: "fadeInUp 0.6s ease-out forwards",
