@@ -136,7 +136,7 @@ export default function Portfolio() {
               {portfolioItems.map((item, index) => (
                 <div
                   key={item.id}
-                  className={`break-inside-avoid mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.id === 0 ? 'column-span-all' : ''} ${item.heightClass} ${item.colorClass}`}
+                  className={`${item.id === 0 ? '' : 'break-inside-avoid'} mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.id === 0 ? 'column-span-all' : ''} ${item.heightClass} ${item.colorClass}`}
                   style={{
                     animationDelay: `${index * 100}ms`,
                     animation: "fadeInUp 0.6s ease-out forwards",
