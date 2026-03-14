@@ -24,7 +24,7 @@ export default function Portfolio() {
       id: 0,
       title: "Encontra Tu Mascota",
       category: "",
-      heightClass: "h-[30vh]",
+      heightClass: "h-[7vh]",
       colorClass: "bg-[#D66528]/75 hover:bg-[#FF8A65]/75",
       link: "https://encontratumascota.ar/?ref=hub",
     },
