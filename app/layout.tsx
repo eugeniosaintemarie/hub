@@ -6,6 +6,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: '∃ugenio hub',
   description: '∃ugenio links',
+  viewport: 'width=device-width, initial-scale=1.0',
 }
 
 export default function RootLayout({
