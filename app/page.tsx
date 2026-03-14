@@ -127,10 +127,10 @@ export default function Portfolio() {
   // }
 
   return (
-    <div className="h-screen relative flex flex-col">
+    <div className="min-h-screen relative flex flex-col">
       <GlitchBackground />
-      <main className="p-2 sm:p-3 relative z-10 w-full flex-1 flex items-center justify-center overflow-x-hidden overflow-y-auto">
-        <div className="w-full max-w-4xl mx-auto px-1 sm:px-0">
+      <main className="p-2 sm:p-3 relative z-10 w-full flex-1 flex items-center justify-center">
+        <div className="w-full max-w-4xl px-1 sm:px-4">
           {showButtons && (
             <div className="space-y-3">
               {portfolioItems[0] && (
