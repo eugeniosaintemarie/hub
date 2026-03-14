@@ -132,28 +132,51 @@ export default function Portfolio() {
       <main className="p-3 relative z-10 w-full flex-1 flex items-center justify-center">
         <div className="max-w-4xl mx-auto">
           {showButtons && (
-            <div className="columns-2 gap-3 space-y-3">
-              {portfolioItems.map((item, index) => (
+            <div className="space-y-3">
+              {portfolioItems[0] && (
                 <div
-                  key={item.id}
-                  className={`${item.id === 0 ? '' : 'break-inside-avoid'} mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.id === 0 ? 'column-span-all' : ''} ${item.heightClass} ${item.colorClass}`}
+                  key={portfolioItems[0].id}
+                  className={`mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${portfolioItems[0].heightClass} ${portfolioItems[0].colorClass}`}
                   style={{
-                    animationDelay: `${index * 100}ms`,
+                    animationDelay: `0ms`,
                     animation: "fadeInUp 0.6s ease-out forwards",
                   }}
                   onClick={() => {
-                    if (item.link) {
-                      window.open(item.link, "_blank")
+                    if (portfolioItems[0].link) {
+                      window.open(portfolioItems[0].link, "_blank")
                     }
                   }}
                 >
                   <div className="relative w-full flex items-center justify-center">
                     <h2 className="text-white text-lg font-bold text-center leading-tight group-hover:scale-105 transition-transform duration-300">
-                      {item.title}
+                      {portfolioItems[0].title}
                     </h2>
                   </div>
                 </div>
-              ))}
+              )}
+              <div className="columns-2 gap-3 space-y-3">
+                {portfolioItems.slice(1).map((item, index) => (
+                  <div
+                    key={item.id}
+                    className={`break-inside-avoid mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
+                    style={{
+                      animationDelay: `${(index + 1) * 100}ms`,
+                      animation: "fadeInUp 0.6s ease-out forwards",
+                    }}
+                    onClick={() => {
+                      if (item.link) {
+                        window.open(item.link, "_blank")
+                      }
+                    }}
+                  >
+                    <div className="relative w-full flex items-center justify-center">
+                      <h2 className="text-white text-lg font-bold text-center leading-tight group-hover:scale-105 transition-transform duration-300">
+                        {item.title}
+                      </h2>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>
