@@ -21,6 +21,14 @@ export default function Portfolio() {
 
   const portfolioItems = [
     {
+      id: 0,
+      title: "Encontra Tu Mascota",
+      category: "",
+      heightClass: "h-[30vh]",
+      colorClass: "bg-[#D66528]/75 hover:bg-[#FF8A65]/75",
+      link: "https://encontratumascota.ar/?ref=hub",
+    },
+    {
       id: 1,
       title: "Notes",
       category: "",
@@ -128,7 +136,7 @@ export default function Portfolio() {
               {portfolioItems.map((item, index) => (
                 <div
                   key={item.id}
-                  className={`break-inside-avoid mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
+                  className={`break-inside-avoid mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.id === 0 ? 'column-span-all' : ''} ${item.heightClass} ${item.colorClass}`}
                   style={{
                     animationDelay: `${index * 100}ms`,
                     animation: "fadeInUp 0.6s ease-out forwards",
