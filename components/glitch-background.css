@@ -1,6 +1,6 @@
 :root {
   --glitch-width: 100vw;
-  --glitch-height: 100vh;
+  --glitch-height: 100dvh;
   --gap-horizontal: 8px;
   --gap-vertical: 4px;
   --time-anim: 2.5s;

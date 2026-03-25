@@ -87,7 +87,7 @@ html, body {
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --glitch-width: 100vw;
-  --glitch-height: 100vh;
+  --glitch-height: 100dvh;
   --gap-horizontal: 8px;
   --gap-vertical: 4px;
   --time-anim: 2.5s;
@@ -361,7 +361,7 @@ body.imgloaded .glitch__img:nth-child(5) {
     background-position: left center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100vh;
+    min-height: 100dvh;
     position: relative;
   }
   body::before {
