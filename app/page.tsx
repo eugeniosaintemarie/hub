@@ -19,7 +19,18 @@ export default function Portfolio() {
   //   "Welcome to the creative space",
   // ]
 
-  const portfolioItems = [
+  type PortfolioItem = {
+    id: number
+    title: string
+    category: string
+    heightClass: string
+    colorClass: string
+    link?: string
+    repo?: string
+    query?: string
+  }
+
+  const portfolioItems: PortfolioItem[] = [
     {
       id: 0,
       title: "Encontra Tu Mascota",
@@ -34,7 +45,8 @@ export default function Portfolio() {
       category: "",
       heightClass: "h-[40dvh]",
       colorClass: "bg-[#ffc107]/75 hover:bg-[#bd9315]/75",
-      link: "https://eugeniosaintemarie.github.io/notes/?ref=hub",
+      repo: "notes",
+      query: "ref=hub",
     },
     {
       id: 2,
@@ -50,7 +62,8 @@ export default function Portfolio() {
       category: "",
       heightClass: "h-[22dvh]",
       colorClass: "bg-[#795548]/75 hover:bg-[#6D4C41]/75",
-      link: "https://eugeniosaintemarie.github.io/amigos-de-mierda/?ref=hub",
+      repo: "amigos-de-mierda",
+      query: "ref=hub",
     },
     {
       id: 4,
@@ -58,7 +71,8 @@ export default function Portfolio() {
       category: "",
       heightClass: "h-[31dvh]",
       colorClass: "bg-[#833AB4]/75 hover:bg-[#673886]/75",
-      link: "https://eugeniosaintemarie.github.io/photos/?ref=hub",
+      repo: "photos",
+      query: "ref=hub",
     },
     {
       id: 5,
@@ -134,17 +148,15 @@ export default function Portfolio() {
           {showButtons && (
             <div className="space-y-3">
               {portfolioItems[0] && (
-                <div
+                <a
                   key={portfolioItems[0].id}
+                  href={portfolioItems[0].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${portfolioItems[0].heightClass} ${portfolioItems[0].colorClass}`}
                   style={{
                     animationDelay: `0ms`,
                     animation: "fadeInUp 0.6s ease-out forwards",
-                  }}
-                  onClick={() => {
-                    if (portfolioItems[0].link) {
-                      window.open(portfolioItems[0].link, "_blank")
-                    }
                   }}
                 >
                   <div className="relative w-full flex items-center justify-center">
@@ -152,21 +164,21 @@ export default function Portfolio() {
                       {portfolioItems[0].title}
                     </h2>
                   </div>
-                </div>
+                </a>
               )}
               <div className="columns-2 gap-3 space-y-3">
                 {portfolioItems.slice(1).map((item, index) => (
-                  <div
+                  <a
                     key={item.id}
+                    href={item.link}
+                    data-repo={item.repo}
+                    data-query={item.query}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`break-inside-avoid mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
                     style={{
                       animationDelay: `${(index + 1) * 100}ms`,
                       animation: "fadeInUp 0.6s ease-out forwards",
-                    }}
-                    onClick={() => {
-                      if (item.link) {
-                        window.open(item.link, "_blank")
-                      }
                     }}
                   >
                     <div className="relative w-full flex items-center justify-center">
@@ -174,7 +186,7 @@ export default function Portfolio() {
                         {item.title}
                       </h2>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -201,6 +213,30 @@ export default function Portfolio() {
           ∃ugenio © {new Date().getFullYear()}
         </a>
       </footer>
+
+      <script
+        dangerouslySetInnerHTML={{
+          __html: [
+            "(() => {",
+            '  const siteBaseURL = "https://eugeniosaintemarie.github.io".replace(/\\/$/, "");',
+            '  const buildRepoURL = (repoName, query = "") => {',
+            '    const url = new URL(repoName + "/", siteBaseURL + "/");',
+            '    if (query) {',
+            '      url.search = query.startsWith("?") ? query : "?" + query;',
+            '    }',
+            '    return url.toString();',
+            '  };',
+            '  document.querySelectorAll("[data-repo]").forEach((link) => {',
+            '    const repoName = link.dataset.repo;',
+            '    if (!repoName) {',
+            '      return;',
+            '    }',
+            '    link.href = buildRepoURL(repoName, link.dataset.query || "");',
+            '  });',
+            "})();",
+          ].join("\n"),
+        }}
+      />
     </div>
   )
 }
