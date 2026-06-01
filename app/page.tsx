@@ -30,6 +30,18 @@ export default function Portfolio() {
     query?: string
   }
 
+  const siteBaseURL = "https://eugeniosm.com".replace(/\/$/, "")
+
+  const buildRepoURL = (repoName: string, query = "") => {
+    const url = new URL(repoName + "/", siteBaseURL + "/")
+
+    if (query) {
+      url.search = query.startsWith("?") ? query : "?" + query
+    }
+
+    return url.toString()
+  }
+
   const portfolioItems: PortfolioItem[] = [
     {
       id: 0,
@@ -45,8 +57,7 @@ export default function Portfolio() {
       category: "",
       heightClass: "h-[40dvh]",
       colorClass: "bg-[#ffc107]/75 hover:bg-[#bd9315]/75",
-      repo: "notes",
-      query: "ref=hub",
+      link: "https://eugeniosm.com/notes?ref=hub",
     },
     {
       id: 2,
@@ -62,8 +73,7 @@ export default function Portfolio() {
       category: "",
       heightClass: "h-[22dvh]",
       colorClass: "bg-[#795548]/75 hover:bg-[#6D4C41]/75",
-      repo: "amigos-de-mierda",
-      query: "ref=hub",
+      link: "https://eugeniosm.com/amigos-de-mierda?ref=hub",
     },
     {
       id: 4,
@@ -71,8 +81,7 @@ export default function Portfolio() {
       category: "",
       heightClass: "h-[31dvh]",
       colorClass: "bg-[#833AB4]/75 hover:bg-[#673886]/75",
-      repo: "photos",
-      query: "ref=hub",
+      link: "https://eugeniosm.com/photos?ref=hub",
     },
     {
       id: 5,
@@ -170,9 +179,7 @@ export default function Portfolio() {
                 {portfolioItems.slice(1).map((item, index) => (
                   <a
                     key={item.id}
-                    href={item.link}
-                    data-repo={item.repo}
-                    data-query={item.query}
+                    href={item.repo ? buildRepoURL(item.repo, item.query || "") : item.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`break-inside-avoid mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
@@ -205,7 +212,7 @@ export default function Portfolio() {
 
       <footer className="w-full flex justify-center pb-2.5 z-10">
         <a
-          href="https://eugeniosaintemarie.github.io"
+          href="https://eugeniosm.com?ref=hub"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white/70 hover:text-white transition-colors duration-300 text-sm font-medium"
@@ -213,30 +220,6 @@ export default function Portfolio() {
           ∃ugenio © {new Date().getFullYear()}
         </a>
       </footer>
-
-      <script
-        dangerouslySetInnerHTML={{
-          __html: [
-            "(() => {",
-            '  const siteBaseURL = "https://eugeniosaintemarie.github.io".replace(/\\/$/, "");',
-            '  const buildRepoURL = (repoName, query = "") => {',
-            '    const url = new URL(repoName + "/", siteBaseURL + "/");',
-            '    if (query) {',
-            '      url.search = query.startsWith("?") ? query : "?" + query;',
-            '    }',
-            '    return url.toString();',
-            '  };',
-            '  document.querySelectorAll("[data-repo]").forEach((link) => {',
-            '    const repoName = link.dataset.repo;',
-            '    if (!repoName) {',
-            '      return;',
-            '    }',
-            '    link.href = buildRepoURL(repoName, link.dataset.query || "");',
-            '  });',
-            "})();",
-          ].join("\n"),
-        }}
-      />
     </div>
   )
 }
