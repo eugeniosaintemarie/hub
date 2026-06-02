@@ -49,7 +49,7 @@ export default function Portfolio() {
       category: "",
       heightClass: "h-[6.5dvh]",
       colorClass: "bg-[#D66528]/75 hover:bg-[#FF8A65]/75",
-      link: "https://encontratumascota.ar/?ref=hub",
+      link: "https://encontratumascota.ar?ref=hub",
     },
     {
       id: 1,
@@ -57,7 +57,7 @@ export default function Portfolio() {
       category: "",
       heightClass: "h-[40dvh]",
       colorClass: "bg-[#ffc107]/75 hover:bg-[#bd9315]/75",
-      link: "https://eugeniosm.com/notes?ref=hub",
+      link: "https://notes.eugeniosm.com?ref=hub",
     },
     {
       id: 2,
@@ -97,7 +97,7 @@ export default function Portfolio() {
       category: "",
       heightClass: "h-[6.5dvh]",
       colorClass: "bg-[#248847]/75 hover:bg-[#25653b]/75",
-      link: "https://musicset.vercel.app/?ref=hub",
+      link: "https://musicset.vercel.app?ref=hub",
     },
     {
       id: 7,
@@ -105,7 +105,7 @@ export default function Portfolio() {
       category: "",
       heightClass: "h-[10dvh]",
       colorClass: "bg-[#5D4037]/75 hover:bg-[#4E342E]/75",
-      link: "https://generala-tracker.vercel.app/?ref=hub",
+      link: "https://generala-tracker.vercel.app?ref=hub",
     },
     {
       id: 8,
@@ -113,7 +113,7 @@ export default function Portfolio() {
       category: "",
       heightClass: "h-[10dvh]",
       colorClass: "bg-[#5D4037]/75 hover:bg-[#4E342E]/75",
-      link: "https://baza-tracker.vercel.app/?ref=hub",
+      link: "https://baza-tracker.vercel.app?ref=hub",
     },
   ]
 
