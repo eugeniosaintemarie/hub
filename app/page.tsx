@@ -22,31 +22,15 @@ export default function Portfolio() {
   type PortfolioItem = {
     id: number
     title: string
-    category: string
     heightClass: string
     colorClass: string
-    link?: string
-    repo?: string
-    query?: string
-  }
-
-  const siteBaseURL = "https://eugeniosm.com".replace(/\/$/, "")
-
-  const buildRepoURL = (repoName: string, query = "") => {
-    const url = new URL(repoName + "/", siteBaseURL + "/")
-
-    if (query) {
-      url.search = query.startsWith("?") ? query : "?" + query
-    }
-
-    return url.toString()
+    link: string
   }
 
   const portfolioItems: PortfolioItem[] = [
     {
       id: 0,
       title: "Encontra Tu Mascota",
-      category: "",
       heightClass: "h-[6.5dvh]",
       colorClass: "bg-[#D66528]/75 hover:bg-[#FF8A65]/75",
       link: "https://encontratumascota.ar?ref=hub",
@@ -54,7 +38,6 @@ export default function Portfolio() {
     {
       id: 1,
       title: "Notes",
-      category: "",
       heightClass: "h-[40dvh]",
       colorClass: "bg-[#ffc107]/75 hover:bg-[#bd9315]/75",
       link: "https://notes.eugeniosm.com?ref=hub",
@@ -62,7 +45,6 @@ export default function Portfolio() {
     {
       id: 2,
       title: "Spotify",
-      category: "",
       heightClass: "h-[6.5dvh]",
       colorClass: "bg-[#1DB954]/75 hover:bg-[#248847]/75",
       link: "https://open.spotify.com/user/eugeniosaintemarie/playlists",
@@ -70,7 +52,6 @@ export default function Portfolio() {
     {
       id: 3,
       title: "Amigos de mierda",
-      category: "",
       heightClass: "h-[22dvh]",
       colorClass: "bg-[#795548]/75 hover:bg-[#6D4C41]/75",
       link: "https://eugeniosm.com/amigos-de-mierda?ref=hub",
@@ -78,7 +59,6 @@ export default function Portfolio() {
     {
       id: 4,
       title: "Photos",
-      category: "",
       heightClass: "h-[31dvh]",
       colorClass: "bg-[#833AB4]/75 hover:bg-[#673886]/75",
       link: "https://eugeniosm.com/photos?ref=hub",
@@ -86,7 +66,6 @@ export default function Portfolio() {
     {
       id: 5,
       title: "Pins",
-      category: "",
       heightClass: "h-[7.5dvh]",
       colorClass: "bg-[#E60023]/75 hover:bg-[#a61229]/75",
       link: "https://es.pinterest.com/eugeniosaintemarie/",
@@ -94,7 +73,6 @@ export default function Portfolio() {
     {
       id: 6,
       title: "Set",
-      category: "",
       heightClass: "h-[6.5dvh]",
       colorClass: "bg-[#248847]/75 hover:bg-[#25653b]/75",
       link: "https://musicset.vercel.app?ref=hub",
@@ -102,7 +80,6 @@ export default function Portfolio() {
     {
       id: 7,
       title: "Generala tracker",
-      category: "",
       heightClass: "h-[10dvh]",
       colorClass: "bg-[#5D4037]/75 hover:bg-[#4E342E]/75",
       link: "https://generala-tracker.vercel.app?ref=hub",
@@ -110,7 +87,6 @@ export default function Portfolio() {
     {
       id: 8,
       title: "La Baza tracker",
-      category: "",
       heightClass: "h-[10dvh]",
       colorClass: "bg-[#5D4037]/75 hover:bg-[#4E342E]/75",
       link: "https://baza-tracker.vercel.app?ref=hub",
@@ -179,7 +155,7 @@ export default function Portfolio() {
                 {portfolioItems.slice(1).map((item, index) => (
                   <a
                     key={item.id}
-                    href={item.repo ? buildRepoURL(item.repo, item.query || "") : item.link}
+                    href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`break-inside-avoid mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
