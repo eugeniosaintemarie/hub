@@ -31,63 +31,70 @@ export default function Portfolio() {
     {
       id: 0,
       title: "Encontra Tu Mascota",
-      heightClass: "h-[6.5dvh]",
+      heightClass: "h-[5dvh]",
       colorClass: "bg-[#D66528]/75 hover:bg-[#FF8A65]/75",
       link: "https://encontratumascota.ar?ref=hub",
     },
     {
       id: 1,
+      title: "Spotify Dashboard",
+      heightClass: "h-[5dvh]",
+      colorClass: "bg-[#1DB954]/75 hover:bg-[#248847]/75",
+      link: "https://spotifydata.eugeniosm.com?ref=hub",
+    },
+    {
+      id: 2,
       title: "Notes",
-      heightClass: "h-[40dvh]",
+      heightClass: "h-[20dvh]",
       colorClass: "bg-[#ffc107]/75 hover:bg-[#bd9315]/75",
       link: "https://notes.eugeniosm.com?ref=hub",
     },
     {
-      id: 2,
+      id: 3,
       title: "Spotify",
-      heightClass: "h-[6.5dvh]",
+      heightClass: "h-[5dvh]",
       colorClass: "bg-[#1DB954]/75 hover:bg-[#248847]/75",
       link: "https://open.spotify.com/user/eugeniosaintemarie/playlists",
     },
     {
-      id: 3,
+      id: 4,
       title: "Amigos de mierda",
-      heightClass: "h-[22dvh]",
+      heightClass: "h-[20dvh]",
       colorClass: "bg-[#795548]/75 hover:bg-[#6D4C41]/75",
       link: "https://eugeniosm.com/amigos-de-mierda?ref=hub",
     },
     {
-      id: 4,
+      id: 5,
       title: "Photos",
-      heightClass: "h-[31dvh]",
+      heightClass: "h-[9.5dvh]",
       colorClass: "bg-[#833AB4]/75 hover:bg-[#673886]/75",
       link: "https://eugeniosm.com/photos?ref=hub",
     },
     {
-      id: 5,
+      id: 6,
       title: "Pins",
-      heightClass: "h-[7.5dvh]",
+      heightClass: "h-[9.5dvh]",
       colorClass: "bg-[#E60023]/75 hover:bg-[#a61229]/75",
       link: "https://es.pinterest.com/eugeniosaintemarie/",
     },
     {
-      id: 6,
+      id: 7,
       title: "Set",
-      heightClass: "h-[6.5dvh]",
+      heightClass: "h-[5dvh]",
       colorClass: "bg-[#248847]/75 hover:bg-[#25653b]/75",
       link: "https://musicset.vercel.app?ref=hub",
     },
     {
-      id: 7,
+      id: 8,
       title: "Generala tracker",
-      heightClass: "h-[10dvh]",
+      heightClass: "h-[9.5dvh]",
       colorClass: "bg-[#5D4037]/75 hover:bg-[#4E342E]/75",
       link: "https://generala-tracker.vercel.app?ref=hub",
     },
     {
-      id: 8,
+      id: 9,
       title: "La Baza tracker",
-      heightClass: "h-[10dvh]",
+      heightClass: "h-[9.5dvh]",
       colorClass: "bg-[#5D4037]/75 hover:bg-[#4E342E]/75",
       link: "https://baza-tracker.vercel.app?ref=hub",
     },
@@ -131,14 +138,14 @@ export default function Portfolio() {
       <main className="p-3 relative z-10 w-full flex-1 flex items-center justify-center">
         <div className="max-w-4xl mx-auto">
           {showButtons && (
-            <div className="space-y-3">
+            <div className="flex flex-col" style={{ gap: '1dvh' }}>
               {portfolioItems[0] && (
                 <a
                   key={portfolioItems[0].id}
                   href={portfolioItems[0].link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${portfolioItems[0].heightClass} ${portfolioItems[0].colorClass}`}
+                  className={`group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${portfolioItems[0].heightClass} ${portfolioItems[0].colorClass}`}
                   style={{
                     animationDelay: `0ms`,
                     animation: "fadeInUp 0.6s ease-out forwards",
@@ -151,17 +158,37 @@ export default function Portfolio() {
                   </div>
                 </a>
               )}
-              <div className="columns-2 gap-3 space-y-3">
-                {portfolioItems.slice(1).map((item, index) => (
+              {portfolioItems[1] && (
+                <a
+                  key={portfolioItems[1].id}
+                  href={portfolioItems[1].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${portfolioItems[1].heightClass} ${portfolioItems[1].colorClass}`}
+                  style={{
+                    animationDelay: `100ms`,
+                    animation: "fadeInUp 0.6s ease-out forwards",
+                  }}
+                >
+                  <div className="relative w-full flex items-center justify-center">
+                    <h2 className="text-white text-lg font-bold text-center leading-tight group-hover:scale-105 transition-transform duration-300">
+                      {portfolioItems[1].title}
+                    </h2>
+                  </div>
+                </a>
+              )}
+              <div className="columns-2" style={{ columnGap: '1dvh' }}>
+                {portfolioItems.filter(item => item.id !== 0 && item.id !== 1).map((item, index) => (
                   <a
                     key={item.id}
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`break-inside-avoid mb-3 group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
+                    className={`break-inside-avoid group relative overflow-hidden rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center p-6 ${item.heightClass} ${item.colorClass}`}
                     style={{
                       animationDelay: `${(index + 1) * 100}ms`,
                       animation: "fadeInUp 0.6s ease-out forwards",
+                      marginBottom: '1dvh',
                     }}
                   >
                     <div className="relative w-full flex items-center justify-center">

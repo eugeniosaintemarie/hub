@@ -19,7 +19,7 @@
 
 .glitch-wrapper { position: fixed; inset:0; pointer-events:none; z-index:0; }
 .glitch { position:absolute; top:0; left:0; width:var(--glitch-width); height:var(--glitch-height); overflow:hidden; }
-.glitch__img { position:absolute; top:calc(-1 * var(--gap-vertical)); left:calc(-1 * var(--gap-horizontal)); width:calc(100% + var(--gap-horizontal)*2); height:calc(100% + var(--gap-vertical)*2); background:url('/background-vintage-computer.jpg') no-repeat left center/cover; transform:translate3d(0,0,0); }
+.glitch__img { position:absolute; top:calc(-1 * var(--gap-vertical)); left:calc(-1 * var(--gap-horizontal)); width:calc(100% + var(--gap-horizontal)*2); height:calc(100% + var(--gap-vertical)*2); background:url('/background-vintage-computer.jpg') no-repeat 50% center/cover; transform:translate3d(0,0,0); }
 .glitch__img:nth-child(n+2){opacity:0;}
 .imgloaded .glitch__img:nth-child(n+2){animation-duration:var(--time-anim);animation-delay:var(--delay-anim);animation-timing-function:linear;animation-iteration-count:infinite;}
 .imgloaded .glitch__img:nth-child(2){background-color:var(--blend-color-2);background-blend-mode:var(--blend-mode-2);animation-name:glitch-anim-1;}
@@ -34,7 +34,7 @@
 
 @media (max-width: 480px) {
   .glitch__img {
-    background-position: left center !important;
+    background-position: 50% center !important;
     background-size: cover !important;
   }
 }

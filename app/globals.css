@@ -316,7 +316,7 @@ html, body {
   left: calc(-1 * var(--gap-horizontal));
   width: calc(100% + var(--gap-horizontal) * 2);
   height: calc(100% + var(--gap-vertical) * 2);
-  background: url("/background-vintage-computer.jpg") no-repeat left center / cover;
+  background: url("/background-vintage-computer.jpg") no-repeat right center / cover;
   transform: translate3d(0, 0, 0);
 }
 .glitch__img:nth-child(n + 2) {
@@ -358,7 +358,7 @@ body.imgloaded .glitch__img:nth-child(5) {
     background-color: #0c0c0c;
     background-image: url("/background-vintage-computer.jpg");
     background-size: cover;
-    background-position: left center;
+    background-position: 25% center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100dvh;
@@ -378,12 +378,12 @@ body.imgloaded .glitch__img:nth-child(5) {
 
   @media (max-width: 768px) {
     body {
-      background-position: left center !important;
+      background-position: 25% center !important;
       background-size: cover;
     }
     
     .glitch__img {
-      background-position: left center !important;
+      background-position: 25% center !important;
     }
 
     body::before {
@@ -393,12 +393,12 @@ body.imgloaded .glitch__img:nth-child(5) {
 
   @media (max-width: 480px) {
     body {
-      background-position: left center !important;
+      background-position: 25% center !important;
       background-size: cover;
     }
     
     .glitch__img {
-      background-position: left center !important;
+      background-position: 25% center !important;
       background-size: cover;
     }
   }
