@@ -32,7 +32,7 @@ export default function Portfolio() {
       id: 0,
       title: "Encontra Tu Mascota",
       heightClass: "h-[5dvh]",
-      colorClass: "bg-[#D66528]/75 hover:bg-[#FF8A65]/75",
+      colorClass: "bg-[#FF8A65] hover:bg-[#ff9a8f]",
       link: "https://encontratumascota.ar?ref=hub",
     },
     {
@@ -152,7 +152,7 @@ export default function Portfolio() {
                   }}
                 >
                   <div className="relative w-full flex items-center justify-center">
-                    <h2 className="text-white text-lg font-bold text-center leading-tight group-hover:scale-105 transition-transform duration-300">
+                    <h2 className="text-[#D66528] text-lg font-bold text-center leading-tight group-hover:scale-105 transition-transform duration-300">
                       {portfolioItems[0].title}
                     </h2>
                   </div>
@@ -171,7 +171,7 @@ export default function Portfolio() {
                   }}
                 >
                   <div className="relative w-full flex items-center justify-center">
-                    <h2 className="text-white text-lg font-bold text-center leading-tight group-hover:scale-105 transition-transform duration-300">
+                    <h2 className="text-[#248847] text-lg font-bold text-center leading-tight group-hover:scale-105 transition-transform duration-300">
                       {portfolioItems[1].title}
                     </h2>
                   </div>
