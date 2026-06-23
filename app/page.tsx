@@ -82,7 +82,7 @@ export default function Portfolio() {
       title: "Set",
       heightClass: "h-[5dvh]",
       colorClass: "bg-[#248847]/75 hover:bg-[#25653b]/75",
-      link: "https://musicset.vercel.app?ref=hub",
+      link: "https://play.eugeniosm.com?ref=hub",
     },
     {
       id: 8,
