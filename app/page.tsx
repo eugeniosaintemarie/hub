@@ -68,7 +68,7 @@ export default function Portfolio() {
       title: "Photos",
       heightClass: "h-[9.5dvh]",
       colorClass: "bg-[#833AB4]/75 hover:bg-[#673886]/75",
-      link: "https://eugeniosm.com/photos?ref=hub",
+      link: "https://photos.eugeniosm.com?ref=hub",
     },
     {
       id: 6,
